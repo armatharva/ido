@@ -1134,3 +1134,620 @@ p {
     font-size: 1.875rem;
   }
 }
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Girl Scouts Logo */
+.logo-container {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.gs-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.gs-text {
+    font-size: 10px;
+    color: #374151;
+    max-width: 80px;
+    line-height: 1.2;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+    color: white;
+    padding: 80px 0 40px;
+    text-align: center;
+    margin-left: 100px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main Content */
+.main {
+    padding: 40px 0;
+    margin-left: 100px;
+}
+
+/* Tab Navigation */
+.tab-nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 8px;
+    margin-bottom: 32px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #374151;
+}
+
+.tab-btn:hover {
+    background: rgba(236, 72, 153, 0.1);
+    color: #ec4899;
+}
+
+.tab-btn.active {
+    background: #ec4899;
+    color: white;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.card h2 {
+    color: #ec4899;
+    font-size: 1.75rem;
+    margin-bottom: 8px;
+}
+
+.card > p {
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+
+/* Video Demo Styles */
+.video-container {
+    margin: 24px 0;
+    text-align: center;
+}
+
+.demo-video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.step {
+    text-align: center;
+    padding: 24px;
+    background: linear-gradient(135deg, #fdf2f8 0%, #f3e8ff 100%);
+    border-radius: 12px;
+}
+
+.step-number {
+    width: 48px;
+    height: 48px;
+    background: #ec4899;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0 auto 16px;
+}
+
+.step h3 {
+    color: #8b5cf6;
+    margin-bottom: 12px;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.product {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 24px;
+    border-left: 4px solid #ec4899;
+}
+
+.product h3 {
+    color: #8b5cf6;
+    margin-bottom: 16px;
+}
+
+.pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.pros h4 {
+    color: #059669;
+    margin-bottom: 8px;
+}
+
+.cons h4 {
+    color: #dc2626;
+    margin-bottom: 8px;
+}
+
+.pros-cons ul {
+    list-style: none;
+}
+
+.pros-cons li {
+    margin-bottom: 4px;
+    position: relative;
+    padding-left: 16px;
+}
+
+.pros li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #059669;
+    font-weight: bold;
+}
+
+.cons li:before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Hygiene Grid */
+.hygiene-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.hygiene-tip {
+    background: linear-gradient(135deg, #ecfdf5 0%, #f0f9ff 100%);
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid #10b981;
+}
+
+.hygiene-tip h3 {
+    color: #059669;
+    margin-bottom: 12px;
+}
+
+.emergency-kit {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid #f59e0b;
+}
+
+.emergency-kit h3 {
+    color: #d97706;
+    margin-bottom: 16px;
+}
+
+.emergency-kit ul {
+    list-style: none;
+}
+
+.emergency-kit li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.emergency-kit li:before {
+    content: "📦";
+    position: absolute;
+    left: 0;
+}
+
+/* Health Grid */
+.health-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.health-section {
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 4px solid #8b5cf6;
+}
+
+.health-section h3 {
+    color: #8b5cf6;
+    margin-bottom: 16px;
+}
+
+.health-section ul {
+    list-style: none;
+}
+
+.health-section li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.health-section li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #ec4899;
+    font-weight: bold;
+}
+
+.warning-box {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    padding: 24px;
+    border-radius: 12px;
+    border: 2px solid #fca5a5;
+}
+
+.warning-box h3 {
+    color: #dc2626;
+    margin-bottom: 12px;
+}
+
+.warning-box p {
+    color: #dc2626;
+}
+
+/* Anatomy Grid */
+.anatomy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.anatomy-diagram {
+    text-align: center;
+}
+
+.anatomy-diagram h3 {
+    color: #8b5cf6;
+    margin-bottom: 16px;
+}
+
+.diagram {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+}
+
+.citation {
+    font-size: 12px;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.citation a {
+    color: #ec4899;
+    text-decoration: none;
+}
+
+.citation a:hover {
+    text-decoration: underline;
+}
+
+.anatomy-info h3 {
+    color: #ec4899;
+    margin-bottom: 20px;
+}
+
+.organ {
+    margin-bottom: 20px;
+    padding: 16px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 3px solid #ec4899;
+}
+
+.organ h4 {
+    color: #8b5cf6;
+    margin-bottom: 8px;
+}
+
+/* Q&A Styles */
+.urgency-legend {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.legend-item {
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.legend-item.emergency {
+    background: #fef2f2;
+    border: 1px solid #fca5a5;
+}
+
+.legend-item.concerning {
+    background: #fffbeb;
+    border: 1px solid #fcd34d;
+}
+
+.legend-item.normal {
+    background: #f0fdf4;
+    border: 1px solid #86efac;
+}
+
+.urgency-icon {
+    font-size: 1.2rem;
+}
+
+.urgency-label {
+    font-weight: 600;
+    flex: 1;
+}
+
+.urgency-desc {
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.qa-accordion {
+    space-y: 8px;
+}
+
+.qa-item {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+}
+
+.qa-question {
+    padding: 16px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.qa-question:hover {
+    background: #f9fafb;
+}
+
+.urgency-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.urgency-badge.emergency {
+    background: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fca5a5;
+}
+
+.urgency-badge.concerning {
+    background: #fffbeb;
+    color: #d97706;
+    border: 1px solid #fcd34d;
+}
+
+.urgency-badge.normal {
+    background: #f0fdf4;
+    color: #059669;
+    border: 1px solid #86efac;
+}
+
+.question-text {
+    flex: 1;
+    font-weight: 500;
+    color: #111827;
+}
+
+.expand-icon {
+    font-size: 1.5rem;
+    color: #6b7280;
+    transition: transform 0.2s;
+}
+
+.qa-item.active .expand-icon {
+    transform: rotate(45deg);
+}
+
+.qa-answer {
+    display: none;
+    padding: 20px;
+    background: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+}
+
+.qa-answer.active {
+    display: block;
+}
+
+.qa-answer p {
+    color: #374151;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        margin-left: 0;
+        padding: 60px 0 30px;
+    }
+    
+    .main {
+        margin-left: 0;
+        padding: 20px 0;
+    }
+    
+    .logo-container {
+        top: 8px;
+        left: 8px;
+    }
+    
+    .gs-logo {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .gs-text {
+        font-size: 9px;
+        max-width: 60px;
+    }
+    
+    .tab-nav {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px;
+    }
+    
+    .tab-btn {
+        padding: 8px 4px;
+        font-size: 12px;
+    }
+    
+    .card {
+        padding: 20px;
+    }
+    
+    .anatomy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pros-cons {
+        grid-template-columns: 1fr;
+    }
+    
+    .health-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hygiene-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .urgency-legend {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .card h2 {
+        font-size: 1.5rem;
+    }
+    
+    .tab-nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
